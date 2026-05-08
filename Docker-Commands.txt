@@ -1,0 +1,5 @@
+-> docker ps
+-> docker pull alpine 3.22.4
+-> docker images
+-> docker pull busybox:unstable-uclibc
+-> docker pull alpine:3.22.4
