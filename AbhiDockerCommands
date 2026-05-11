@@ -1,1 +1,10 @@
 
+| Command                                | Description                 |
+| -------------------------------------- | --------------------------- |
+| `docker ps`                            | List running containers     |
+| `docker ps -a`                         | List all containers         |
+| `docker images`                        | List images                 |
+| `docker pull <image>`                  | Download image              |
+| `docker run <image>`                   | Run container               |
+| `docker run -d <image>`                | Run container in background |
+| `docker run -p HOST:CONTAINER <image>` | Port mapping                |
