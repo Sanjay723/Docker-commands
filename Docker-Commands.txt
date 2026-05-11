@@ -2,8 +2,8 @@
 -> docker ps -a --- list all containers including exited
 -> docker pull alpine 3.22.4 --- pull an image from docker registory (https://hub.docker.com)
 -> docker images --- list the local pulled images
--> docker pull busybox:unstable-uclibc 
+-> docker pull busybox:unstable-uclibc --- pull to local registry / system 
 -> docker pull alpine:3.22.4 
--> docker inspect image version: Details of Images
--> docker exec -it <container-id> /bin/bash : Login to container
--> docker info: docker engine details
+-> docker inspect image version --  Details of Images
+-> docker exec -it <container-id> /bin/bash -- Login to container
+-> docker info --- docker engine details
