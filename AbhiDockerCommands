@@ -12,9 +12,9 @@
 | `docker run -itd --name webapp01 -p 8080:80 nginx` | Run Nginx container in detached mode      |
 | `docker exec -it <container> /bin/bash`            | Access container terminal                 |
 | `echo "hello" > /usr/share/nginx/html/index.html`  | Create/modify Nginx web page              |
-| `docker info`                                      | Display Docker system information         |
-| `docker rmi <image_id>`                            | Remove Docker image                       |
-| `docker rmi -f <image_id>`                         | Force remove Docker image                 |
+|  docker info                                       | Display Docker system information         |
+|  docker rmi <image_id>                             | Remove Docker image                       |
+|  docker rmi -f <image_id>                          | Force remove Docker image                 |
 |  docker stop <container>                           | Stop a running container                  |
 |  docker image prune -a                             | Remove all unused Docker images           |
 |  docker inspect <container_or_image>               | Show detailed container/image information |
