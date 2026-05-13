@@ -1,9 +1,17 @@
+
 -> docker ps --- list running containers 
 -> docker ps -a --- list all containers including exited
 -> docker pull alpine 3.22.4 --- pull an image from docker registory (https://hub.docker.com)
 -> docker images --- list the local pulled images
 -> docker pull busybox:unstable-uclibc --- pull to local registry / system 
--> docker pull alpine:3.22.4 
--> docker inspect image version --  Details of Images
--> docker exec -it <container-id> /bin/bash -- Login to container
+-> docker run image -- run a container
+-> docker run -d image -- run container in background
+-> docker run -p HOST:CONTAINER  -- Port mapping host to container
+-> docker run -itd --name myapp01 -p 8080:80 nginx -- run nginx container in detached mode
+-> docker inspect container_or_image --  Detailed Container/Image Information
+-> docker exec -it <container-id> /bin/bash -- Login and access to container terminal
 -> docker info --- docker engine details
+-> docker rmi image_id --- remove a docker image
+-> docker rmi -f image_id --- force remove docker image
+-> docker stop container --- stop a running container
+-> docker image prune -a --- remove all unused docker images
