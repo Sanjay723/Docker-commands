@@ -14,4 +14,11 @@
 -> docker rmi image_id --- remove a docker image
 -> docker rmi -f image_id --- force remove docker image
 -> docker stop container --- stop a running container
--> docker image prune -a --- remove all unused docker images
+-> docker image/system prune -a --- remove all unused docker images
+-> docker exec container-id ls --- list the directories in the container
+-> docker exec container-id mkdir dir_name --- create a directory in the container
+-> docker cp index.html container-id:/dir_name --- copy the file from home directory to specified directory
+-> docker commit container-id image-name --- create a new docker image from a running or stopped container(custom clone,reusable)
+-> docker save -o image.tar image-name:v1 --- saves docker image as a tar archive file for backup, transfer or sharing between systems.
+-> docker load -i image.tar --- loads a docker image from a .tar archive file into local docker system
+-> docker save alpine:latest -o alpine-lts.tar --- saves alpine docker image as a .tar archive file for backup or transfer.
