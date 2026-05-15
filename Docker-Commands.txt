@@ -26,3 +26,10 @@
 -> docker history webapp-img:v1.0 --- shows the history and layers used to build the docker ima
 -> docker tag alpine:latest alpine:ltsv1.0 --- creates a new tag/name for an existing Docker image version (retagging).
 -> docker rename zealous_gates new_container --- renames existing docker container with a new container name.
+-> docker push sanjaygovinds44/webapp-img:v1.1 --- push docker image from local system to the docker hub repository.
+-> docker login -u <username> --- login into docker hub or docker registry.
+-> docker diff container-id --- shows changes made to files and directories inside a container.
+-> docker logs -f container-id --- displays and continuously follows live container logs.
+-> docker stats --- shows real-time CPU, Memory and Network usage statistics of running containers.
+
+-> docker 
