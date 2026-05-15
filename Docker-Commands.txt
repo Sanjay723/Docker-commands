@@ -22,3 +22,7 @@
 -> docker save -o image.tar image-name:v1 --- saves docker image as a tar archive file for backup, transfer or sharing between systems.
 -> docker load -i image.tar --- loads a docker image from a .tar archive file into local docker system
 -> docker save alpine:latest -o alpine-lts.tar --- saves alpine docker image as a .tar archive file for backup or transfer.
+-> docker image inspect alpine:latest --- displays detailed info about alpine docker image in JSON format.
+-> docker history webapp-img:v1.0 --- shows the history and layers used to build the docker ima
+-> docker tag alpine:latest alpine:ltsv1.0 --- creates a new tag/name for an existing Docker image version (retagging).
+-> docker rename zealous_gates new_container --- renames existing docker container with a new container name.
