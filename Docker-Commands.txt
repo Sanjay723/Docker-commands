@@ -31,3 +31,4 @@
 -> docker diff container-id --- shows changes made to files and directories inside a container.
 -> docker logs -f container-id --- displays and continuously follows live container logs.
 -> docker stats --- shows real-time CPU, Memory and Network usage statistics of running containers.
+-> docker build -t mywebapp:v1 . - builds docker image
