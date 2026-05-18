@@ -1,0 +1,8 @@
+pwd - specifies present working directory
+ls (ls -ltra . , ls -ltra ..) - list files in the system
+cd dir_name - change current directory to specified directory
+mkdir dir_name -- creates a directory in system
+touch filename -- creates a file in 
+. - specifies current directory
+.. - specifies parent directory
+mv ../*.tar . - move all files ending in .tar from parent directory directly into your current directory.
