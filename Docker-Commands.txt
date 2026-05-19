@@ -36,3 +36,10 @@
 -> docker volume create vol_name --- creates a docker volume.
 -> docker volume inspect vol_name --- displays detailed config data for a docker volume in JSON format(primarily used to locate where the volume's physical data is actually stored on your system.)
 -> docker volume rm vol_name / docker volume prune --- removes docker volume
+-> docker network ls --- Lists all Docker networks available on your local daemon, including their unique IDs, names, drivers, and scopes.
+-> docker network inspect bridge --- Displays detailed configuration data for the default network named bridge in JSON format, showing connected containers and their IP addresses.
+-> docker network create my-net --- Creates a new, user-defined Docker network named my-net using the default bridge driver to allow isolated communication between containers.
+-> docker network inspect my-net --- Displays configuration details for your custom network my-net, allowing you to verify its subnet, gateway settings, and active connected containers.
+-> docker network connect my-net web-app --- Dynamically connects a running container named web-app to your custom network my-net so it can talk to other containers on that network.
+-> docker network disconnect bridge web-app --- Disconnects the container named web-app from the default bridge network, preventing it from communicating with containers on that specific network.
+-> docker exec 9817 ping 172.18.0.2 --- Runs the ping command inside a running container (ID starting with 9817) to test its network connectivity to the specific IP address 172.18.0.2.
