@@ -31,4 +31,8 @@
 -> docker diff container-id --- shows changes made to files and directories inside a container.
 -> docker logs -f container-id --- displays and continuously follows live container logs.
 -> docker stats --- shows real-time CPU, Memory and Network usage statistics of running containers.
--> docker build -t mywebapp:v1 . - builds docker image
+-> docker build -t mywebapp:v1 . --- builds docker image
+-> docker volume ls --- list docker volumes in system
+-> docker volume create vol_name --- creates a docker volume.
+-> docker volume inspect vol_name --- displays detailed config data for a docker volume in JSON format(primarily used to locate where the volume's physical data is actually stored on your system.)
+-> docker volume rm vol_name / docker volume prune --- removes docker volume
