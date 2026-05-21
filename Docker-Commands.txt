@@ -43,3 +43,14 @@
 -> docker network connect my-net web-app --- Dynamically connects a running container named web-app to your custom network my-net so it can talk to other containers on that network.
 -> docker network disconnect bridge web-app --- Disconnects the container named web-app from the default bridge network, preventing it from communicating with containers on that specific network.
 -> docker exec 9817 ping 172.18.0.2 --- Runs the ping command inside a running container (ID starting with 9817) to test its network connectivity to the specific IP address 172.18.0.2.
+-> docker run -itd --restart unless-stopped sanjaygovinds44/mywebapp:v1 --- Starts a container in detached mode that automatically restarts if it crashes or if the host system reboots, unless it was manually stopped beforehand.
+-> docker system df /df -h --- Displays detailed disk usage information
+-> docker pause container_name --- Pauses all processes inside a running container, freezing its execution state without stopping or killing it.
+-> docker unpause container_name --- Resumes all processes inside a previously paused container, picking up exactly where it left off.
+-> docker exec 7959 bash -c "apt update && apt install -y nginx" --- Updates the package repository lists and installs the Nginx web server inside an Ubuntu or Debian-based container (ID 7959).
+-> docker exec 8959 sh -c "apk update && apk add nginx" --- Updates the package repository indexes and installs the Nginx web server inside an Alpine Linux-based container (ID 8959).
+-> docker exec new_container1 nginx -h --- Executes the Nginx help command inside the container named new_container1 to list all available configuration parameters and flags for Nginx.
+-> docker exec new_container1 mkdir -pv /doc/wroot --- Creates a nested directory path /doc/wroot inside the container new_container1, printing a message for each directory created along the way.
+-> docker exec new_container1 ls /doc --- Lists the files and folders inside the /doc directory from within the running container named new_container1.
+-> docker exec new_container1 nginx -p /doc/wroot --- Runs the Alpine Linux package manager (apk) inside a running container (ID 8843) to download and install the Nginx web server without caching temporary installation files.
+-> docker exec 8843 sh -c "apk add --no-cache nginx" --- Executes Nginx inside the container named new_container1, setting the server's home/prefix directory path to /doc/wroot for managing configuration and working files.
