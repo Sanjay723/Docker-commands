@@ -1,0 +1,14 @@
+docker run -itd alpine
+docker exec -it nginxapp apk add --no-cache nginx
+docker exec -it nginxapp ls var/www/localhost/htdocs/
+docker exec -it nginxapp mkdir var/www/html
+docker cp index.html nginxapp:/var/www/html/
+docker exec -it nginxapp ls var/www/html
+docker exec -it nginxapp ls etc/nginx/http.d/
+docker exec -it nginxapp cat etc/nginx/http.d/default.conf
+docker cp default.conf nginxapp:/etc/nginx/http.d/
+docker exec -it nginxapp cat etc/nginx/http.d/default.conf
+docker commit --change='CMD ["nginx", "-g", "daemon off;"]' nginxapp webapp:nginx
+docker run -itd -p 8085:80 webapp:nginx
+docker tag webapp:nginx sanjaygovinds44/webappnginx:v1
+docker push sanjaygovinds44/webappnginx:v1
