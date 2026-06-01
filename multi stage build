@@ -1,0 +1,27 @@
+
+git clone <proj.url.git>
+
+#Dockerfile
+#BUILD stage
+
+FROM node:22 AS builder
+WORKDIR /app
+COPY package*.json .
+RUN npm install
+COPY . .
+RUN npm run build
+
+# RUN stage
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY default.conf /etc/nginx/http.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+
+
+mv Dockerfile reactfile --- renames dockerfile to reactfile
+docker build -f reactfile -t reactapp01 .
+docker images
+docker run -itd -p 8030:80 reactapp01:latest
+-- serve the app in localhost:8030 
