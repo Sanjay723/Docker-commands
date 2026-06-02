@@ -12,3 +12,8 @@ docker commit --change='CMD ["nginx", "-g", "daemon off;"]' nginxapp webapp:ngin
 docker run -itd -p 8085:80 webapp:nginx --- Runs the new image as a container, mapping host port 8085 to container port 80.
 docker tag webapp:nginx sanjaygovinds44/webappnginx:v1 --- Tags the local image with your Docker Hub username and version v1.
 docker push sanjaygovinds44/webappnginx:v1 --- Uploads the tagged image to your public Docker Hub repository.
+docker exec -it mobileapp mkdir -p /var/www/html
+docker cp index.html mobileapp:/var/www/html/
+docker exec -it mobileapp cat /var/log/nginx/error.log
+docker exec -it mobileapp chown -R nginx:nginx /var/www/html
+docker exec -it mobileapp nginx -s reload
