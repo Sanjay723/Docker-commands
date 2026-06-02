@@ -17,3 +17,6 @@ docker cp index.html mobileapp:/var/www/html/
 docker exec -it mobileapp cat /var/log/nginx/error.log
 docker exec -it mobileapp chown -R nginx:nginx /var/www/html
 docker exec -it mobileapp nginx -s reload
+docker exec -it mytestapp-webapp-1 chown -R nginx:nginx /var/www/html
+docker exec -it mytestapp-webapp-1 chmod -R 755 /var/www/html
+docker exec -it mytestapp-webapp-1 nginx -s reload
