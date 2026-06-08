@@ -4,3 +4,12 @@ COPY --chown=nginx:nginx index.html /var/www/html/
 COPY default.conf /etc/nginx/http.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+
+Entrypoint Dockerfile
+FROM debian:trixie-slim
+RUN apt update && apt upgrade -y && apt install vim -y
+WORKDIR /snjs
+COPY entrypoint.sh .
+RUN chmod +x /snjs/entrypoint.sh
+ENTRYPOINT ["/snjs/entrypoint.sh"]
+CMD ["name"]
