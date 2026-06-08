@@ -54,3 +54,9 @@
 -> docker exec new_container1 ls /doc --- Lists the files and folders inside the /doc directory from within the running container named new_container1.
 -> docker exec new_container1 nginx -p /doc/wroot --- Runs the Alpine Linux package manager (apk) inside a running container (ID 8843) to download and install the Nginx web server without caching temporary installation files.
 -> docker exec 8843 sh -c "apk add --no-cache nginx" --- Executes Nginx inside the container named new_container1, setting the server's home/prefix directory path to /doc/wroot for managing configuration and working files.
+-> docker compose up -d --- Starts your entire multi-container application stack in the background (detached mode) using existing images.
+-> docker compose up -d --build --- Forces Docker to rebuild the container images from scratch before starting the stack in the background.
+-> docker compose down --- Stops and completely removes the running containers and network setup created by your Compose file.
+-> docker compose down -v --- Stops the containers and wipes out all associated data volumes along with them for a completely fresh restart.
+-> docker compose logs --- Displays the accumulated log printouts and error history from all running containers in your stack.
+-> docker compose logs -f --- Streams and follows the container logs in real-time as events happen, right inside your terminal screen.
