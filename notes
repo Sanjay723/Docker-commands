@@ -6,3 +6,10 @@ touch filename -- creates a file in
 . - specifies current directory
 .. - specifies parent directory
 mv ../*.tar . - move all files ending in .tar from parent directory directly into your current directory.
+echo $? - non zero value exits immediately from bash script
+
+entrypoint.sh
+#!/usr/bin/env bash
+set -e
+NAME="$1"
+echo "The name is $NAME"
