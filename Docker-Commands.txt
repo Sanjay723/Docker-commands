@@ -60,3 +60,5 @@
 -> docker compose down -v --- Stops the containers and wipes out all associated data volumes along with them for a completely fresh restart.
 -> docker compose logs --- Displays the accumulated log printouts and error history from all running containers in your stack.
 -> docker compose logs -f --- Streams and follows the container logs in real-time as events happen, right inside your terminal screen.
+-> docker compose up -d --scale reactapp=3 --- Starts the services defined in the Docker Compose file in detached mode (-d) and scales the reactapp service to 3 running container instances.
+-> docker swarm init --advertise-addr ip-address --- Initializes a Docker Swarm cluster and sets the specified IP address for other nodes to use when joining the swarm.
