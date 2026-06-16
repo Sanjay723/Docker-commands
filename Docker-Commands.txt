@@ -63,3 +63,4 @@
 -> docker compose up -d --scale reactapp=3 --- Starts the services defined in the Docker Compose file in detached mode (-d) and scales the reactapp service to 3 running container instances.
 -> docker swarm init --advertise-addr ip-address --- Initializes a Docker Swarm cluster and sets the specified IP address for other nodes to use when joining the swarm.
 -> docker node ls --- used exclusively on a Swarm Manager (Master) node to view and manage all the machines (nodes) that belong to your Docker Swarm cluster.
+-> docker service create --name webapp 8080:80 nginx --- Launches an Nginx cluster web service.
