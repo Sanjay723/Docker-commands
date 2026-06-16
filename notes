@@ -13,3 +13,13 @@ entrypoint.sh
 set -e
 NAME="$1"
 echo "The name is $NAME"
+
+configuration:
+sudo nano /etc/netplan/50-cloud-init.yaml - network configuration file.
+sudo netplan try
+sudo netplan apply
+getent passwd
+getent group
+getent group | grep "docker"
+sudo usermod -aG docker ubuntu
+newgrp docker
