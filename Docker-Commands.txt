@@ -71,3 +71,8 @@
 -> docker service scale webapp=5 --- Scales webapp service to five replicas.
 -> docker service update --replicas 3 webapp --- Scales webapp service to three replicas.
 -> docker service rm webapp -- Deletes the webapp swarm service.
+-> docker service update --image nginx:latest my-app --- Updates my-app service to latest Nginx.
+-> docker service update --publish-add 8082:80 my-app --- Adds port 6082 to my-app service.
+-> docker service update --publish-rm 8082:80 my-app --- Removes port 8082 from my-app.
+-> docker service update --update-parallelism 2 --update-delay 15s my-app--- Updates two containers every fifteen seconds.
+-> docker service update --image nginx:alpine --update-parallelism 2 --update-delay 15s my-app --- Updates rolling deployment two containers incrementally.
